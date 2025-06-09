@@ -1,15 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
+const repoName = "ka-transportation";
+
 export default defineConfig(({ command }) => {
-  const config = {
+  const base = command === "build" ? `/${repoName}/` : "/";
+
+  return {
     plugins: [react()],
+    base: base,
   };
-
-  if (command === "build") {
-    config.base = "/ka-transportation/";
-  }
-
-  return config;
 });
