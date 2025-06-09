@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // Get the current path without the base and redirect to the root of your app
+      var path = window.location.pathname;
+      var base = "/ka-transportation/"; // Your base path
+      var redirectPath = base + "index.html";
+      // Only redirect if not already at the root of the app and not a direct file
+      if (path !== base && !path.includes(".")) {
+        window.location.replace(
+          redirectPath + window.location.search + window.location.hash
+        );
+      }
+    </script>
+    <meta charset="utf-8" />
+    <title>Page Not Found</title>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
