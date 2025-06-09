@@ -1,0 +1,33 @@
+$ka-gold: #bb8d00ff;
+
+.nav-container {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  height: 50px;
+}
+
+.nav-link {
+  cursor: pointer;
+  margin-right: 30px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: $ka-gold;
+  border: 1px solid $ka-gold;
+
+  &:hover {
+    color: white;
+    background-color: $ka-gold;
+  }
+}
