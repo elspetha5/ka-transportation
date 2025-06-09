@@ -3,39 +3,37 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Trigger the workflow on pushes to the 'main' branch
-  workflow_dispatch: # Allows manual triggering from the GitHub Actions tab
+      - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest # Use a fresh Ubuntu environment
+    runs-on: ubuntu-latest
 
-    permissions: # Permissions required for GitHub Actions to deploy to Pages
-      contents: write # Needed to push to gh-pages branch or update workflow
-      pages: write # Needed to manage GitHub Pages deployments
-      id-token: write # Needed for OIDC if using gh-pages action or similar
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4 # Get your code
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20" # Or your preferred Node.js version (e.g., '18')
-          cache: "npm" # Caches npm dependencies to speed up builds
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm install
 
       - name: Build Vite app
-        run: npm run build # This runs the 'build' script defined in package.json
+        run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4 # This action handles the deployment to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Automatically provided token for workflows
-          publish_dir: ./dist # The directory containing your built application
-          # cname: example.com # Uncomment and replace if you have a custom domain
-          # # You might want to specify the branch if it's not 'gh-pages' by default
-          # publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
