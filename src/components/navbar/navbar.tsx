@@ -6,7 +6,11 @@ function Navbar() {
   return (
     <div className="nav-container">
       <div className="nav-inner-container">
-        <img className="nav-logo" src="/images/kat-logo.png" alt="logo" />
+        <img
+          className="nav-logo"
+          src={`${import.meta.env.BASE_URL}images/kat-logo.png`}
+          alt="logo"
+        />
         <Link className="nav-link" to="#">
           Pay
         </Link>
