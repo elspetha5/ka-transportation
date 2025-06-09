@@ -1,4 +1,4 @@
-$ka-gold: #bb8d00ff;
+@use "../../shared//styles.scss" as styles;
 
 .nav-container {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -20,14 +20,17 @@ $ka-gold: #bb8d00ff;
 
 .nav-link {
   cursor: pointer;
-  margin-right: 30px;
   padding: 5px 20px;
   border-radius: 5px;
-  color: $ka-gold;
-  border: 1px solid $ka-gold;
+  color: styles.$ka-gold;
+  border: 1px solid styles.$ka-gold;
 
   &:hover {
     color: white;
-    background-color: $ka-gold;
+    background-color: styles.$ka-gold;
+  }
+
+  @include styles.media(styles.$min-md) {
+    margin-right: 30px;
   }
 }

@@ -1,3 +1,5 @@
+@use "../../shared/styles.scss" as styles;
+
 .hero-container {
   background-image: url("/images/kat-hero-image.svg");
   background-repeat: no-repeat;
@@ -27,6 +29,10 @@
   margin-top: 30px;
   font-weight: bold;
   font-style: italic;
-  font-size: 72px;
   max-width: 350px;
+  font-size: 60px;
+
+  @include styles.media(styles.$min-sm) {
+    font-size: 72px;
+  }
 }
