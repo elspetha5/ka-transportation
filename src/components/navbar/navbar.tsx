@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import "./navbar.scss";
 
 function Navbar() {
@@ -11,9 +9,6 @@ function Navbar() {
           src={`${import.meta.env.BASE_URL}images/kat-logo.png`}
           alt="logo"
         />
-        <Link className="nav-link" to="#">
-          Pay
-        </Link>
       </div>
     </div>
   );

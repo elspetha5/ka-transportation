@@ -81,10 +81,13 @@
   }
 }
 
-.contact-info-phone {
-  color: styles.$link-blue;
-
+.button {
   &:hover {
     color: styles.$ka-gold;
   }
+}
+
+.contact-payment {
+  font-size: 16px;
+  color: styles.$medium-grey;
 }
