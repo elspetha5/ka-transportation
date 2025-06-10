@@ -81,12 +81,6 @@
   }
 }
 
-.button {
-  &:hover {
-    color: styles.$ka-gold;
-  }
-}
-
 .contact-payment {
   font-size: 16px;
   color: styles.$medium-grey;
@@ -100,4 +94,11 @@
 .zelle {
   color: #6c1fd4;
   border-bottom: 1px solid #6c1fd4;
+}
+
+.button {
+  &:hover {
+    color: styles.$ka-gold;
+    border-bottom: 1px solid styles.$ka-gold;
+  }
 }
