@@ -22,7 +22,7 @@ function HomePage() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="button"
+              className="venmo button"
             >
               Venmo
             </a>{" "}
@@ -31,7 +31,7 @@ function HomePage() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="button"
+              className="zelle button"
             >
               Zelle
             </a>
