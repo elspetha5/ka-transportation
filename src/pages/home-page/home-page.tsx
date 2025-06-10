@@ -2,14 +2,22 @@ import "./home-page.scss";
 
 function HomePage() {
   return (
-    <div>
+    <div className="home-container">
       <div className="hero-container">
         <div className="hero-inner-container">
           <div className="hero-tagline">The Future of Getting There</div>
         </div>
       </div>
 
-      <div></div>
+      <div className="contact-container">
+        <div className="contact-profile-pic" />
+        <div className="contact-info-container">
+          <div>Dhulfiqar Kamoona</div>
+          <a href="tel:+14802576590" className="contact-info-phone">
+            480-257-6590
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

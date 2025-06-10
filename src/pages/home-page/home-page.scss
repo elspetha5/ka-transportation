@@ -1,5 +1,9 @@
 @use "../../shared/styles.scss" as styles;
 
+.home-container {
+  border-bottom: 20px solid styles.$ka-gold;
+}
+
 .hero-container {
   background-image: url("/images/kat-hero-image.svg");
   background-repeat: no-repeat;
@@ -26,7 +30,7 @@
 }
 
 .hero-tagline {
-  margin-top: 30px;
+  margin-bottom: 15px;
   font-weight: bold;
   font-style: italic;
   max-width: 350px;
@@ -34,5 +38,53 @@
 
   @include styles.media(styles.$min-sm) {
     font-size: 72px;
+  }
+}
+
+.contact-container {
+  margin: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @include styles.media(styles.$min-sm) {
+    margin: 150px 0;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.contact-profile-pic {
+  width: 200px;
+  height: 200px;
+  background-image: url("/images/cartoon-profile-pic-gold.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+
+  @include styles.media(styles.$min-md) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.contact-info-container {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+
+  @include styles.media(styles.$min-sm) {
+    text-align: left;
+    margin-left: 10px;
+  }
+}
+
+.contact-info-phone {
+  color: styles.$link-blue;
+
+  &:hover {
+    color: styles.$ka-gold;
   }
 }
