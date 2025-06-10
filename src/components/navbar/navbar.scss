@@ -1,36 +1,23 @@
 @use "../../shared//styles.scss" as styles;
 
 .nav-container {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-bottom: 5px solid styles.$ka-gold;
 }
 
 .nav-inner-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 15px 20px;
+  padding: 10px 20px 15px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .nav-logo {
-  height: 50px;
-}
-
-.nav-link {
-  cursor: pointer;
-  padding: 5px 20px;
-  border-radius: 5px;
-  color: styles.$ka-gold;
-  border: 1px solid styles.$ka-gold;
-
-  &:hover {
-    color: white;
-    background-color: styles.$ka-gold;
-  }
-
-  @include styles.media(styles.$min-md) {
-    margin-right: 30px;
-  }
+  height: 45px;
 }
