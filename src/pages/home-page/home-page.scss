@@ -50,6 +50,16 @@
 
   @include styles.media(styles.$min-sm) {
     margin: 150px 0;
+  }
+}
+
+.contact-pic-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @include styles.media(styles.$min-sm) {
     flex-direction: row;
     align-items: flex-end;
   }
@@ -58,11 +68,12 @@
 .contact-profile-pic {
   width: 200px;
   height: 200px;
-  background-image: url("/images/cartoon-profile-pic-gold.png");
+  background-image: url("/images/profile-pic.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   border-radius: 50%;
+  box-shadow: 0 1px 10px #a7a7a73d;
 
   @include styles.media(styles.$min-md) {
     width: 300px;
@@ -86,6 +97,11 @@
   color: styles.$medium-grey;
 }
 
+.cash {
+  color: #37d433;
+  border-bottom: 1px solid #37d433;
+}
+
 .venmo {
   color: #388bff;
   border-bottom: 1px solid #388bff;
@@ -97,8 +113,14 @@
 }
 
 .button {
+  cursor: pointer;
   &:hover {
     color: styles.$ka-gold;
     border-bottom: 1px solid styles.$ka-gold;
   }
+}
+
+.zelle-pic {
+  width: 100%;
+  max-width: 300px;
 }
