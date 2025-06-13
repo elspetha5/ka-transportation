@@ -30,6 +30,9 @@ jobs:
       - name: Build Vite app
         run: npm run build # This runs the 'build' script defined in package.json
 
+      - name: Create CNAME file
+        run: echo "kamoona-transport.com" > ./dist/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4 # This action handles the deployment to gh-pages branch
         with:
